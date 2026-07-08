@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --red: #C8102E;
+  --red-dark: #A00D24;
+  --navy: #1B4F72;
+  --charcoal: #1F2937;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  color: #0A0A0A;
+}
+
+.font-oswald { font-family: 'Oswald', sans-serif; }
+
+@layer components {
+  .btn-red {
+    @apply bg-brand-red text-white font-oswald font-bold uppercase tracking-widest px-6 py-3 text-sm transition-all duration-150 hover:bg-brand-red-dark hover:-translate-y-px;
+  }
+  .btn-outline-dark {
+    @apply border-2 border-brand-black text-brand-black font-oswald font-bold uppercase tracking-widest px-6 py-3 text-sm transition-all duration-150 hover:bg-brand-black hover:text-white;
+  }
+  .btn-navy {
+    @apply bg-brand-navy text-white font-oswald font-bold uppercase tracking-widest px-6 py-3 text-sm transition-all duration-150 hover:bg-brand-navy-dark;
+  }
+  .section-white { @apply py-20 px-6 bg-white; }
+  .section-off { @apply py-20 px-6 bg-gray-50; }
+  .section-slate { @apply py-20 px-6 bg-gray-100; }
+  .section-black { @apply py-20 px-6 bg-brand-black text-white; }
+  .section-charcoal { @apply py-20 px-6 bg-brand-charcoal text-white; }
+  .eyebrow {
+    @apply font-oswald text-xs font-bold tracking-[0.25em] uppercase text-brand-red mb-3;
+  }
+  .display-title {
+    @apply font-oswald font-bold uppercase leading-none tracking-tight text-brand-black;
+    font-size: clamp(2.25rem, 5vw, 4rem);
+  }
+  .section-title {
+    @apply font-oswald font-bold uppercase leading-tight tracking-tight text-brand-black mb-4;
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  }
+  .page-hero {
+    @apply bg-brand-black py-20 px-6 border-b-4 border-brand-red;
+  }
+  .card {
+    @apply bg-white border border-gray-200 p-8 relative overflow-hidden;
+  }
+  .card-top-bar {
+    @apply absolute top-0 left-0 right-0 h-1 bg-brand-red scale-x-0 origin-left transition-transform duration-300;
+  }
+  .card:hover .card-top-bar { @apply scale-x-100; }
+}
