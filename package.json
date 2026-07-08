@@ -1,7 +1,7 @@
 {
   "name": "eiesa-next",
   "version": "0.1.0",
-  "private": true,
+  "private": true, 
   "scripts": {
     "dev": "next dev",
     "build": "opennextjs-cloudflare build --dangerouslyUseUnsupportedNextVersion",
